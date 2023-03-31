@@ -31,14 +31,7 @@ public class C01_TopSorusu {
 
         System.out.println("Topun aldigi toplam yol: "+topunAldigiToplamYol+
                 "\nTopun ziplama sayisi: "+ziplamaSayisi);
-/*
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
-  git branch -M main
-git remote add origin https://github.com/EdaAltunay/Exercises.git
-git push -u origin main
 
- */
 
 
     }
