@@ -1,5 +1,6 @@
 package exceptions_teamExercises;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class C01_InputMismatchException {
@@ -11,29 +12,28 @@ public class C01_InputMismatchException {
         // ve bu sayilarin toplaminin kac oldugunu yazdirin.
 
 
-        Scanner scan=new Scanner(System.in);
-        int girilensayi=0;
-        int toplam=0;
-        int sayac=0;
+        Scanner scan = new Scanner(System.in);
+        int girilensayi = 0;
+        int toplam = 0;
+        int sayac = 0;
 
-
-        while (true){
+        while (true) {
             System.out.println("lutfen toplanmak uzere sayılar gırınız. bitirmek icin Q ya basınız.");
 
-            girilensayi= scan.nextInt();
-            toplam+=girilensayi;
-            sayac++;
-            String str=scan.next();
-
-
-
+            try {
+                girilensayi = scan.nextInt();
+                toplam += girilensayi;
+                sayac++;
+            } catch (InputMismatchException e) {
+                String str = scan.next();
+                if (str.equalsIgnoreCase("Q")) {
+                    break;
+                }
+                System.out.println("sayi dısında giris yapamazsınız!!! ");
+            }
         }
 
-
-
-
-
-
+        System.out.println("girilen " + sayac + " adet sayının toplamı = " + toplam);
 
 
     }
